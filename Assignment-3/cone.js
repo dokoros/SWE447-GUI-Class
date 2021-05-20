@@ -1,5 +1,5 @@
 var gl = null;
-var cone = null;
+
 
 function init() {
     var canvas = document.getElementById( "webgl-canvas" );
@@ -11,13 +11,14 @@ function init() {
         return;
     }
 
-    cone = new Cone(gl, n);
+    Cone(gl)
 
     render();
 }
 
 function render() {
-    cone.render();
+    Cone.render();
 }
 
 window.onload = init;
+
