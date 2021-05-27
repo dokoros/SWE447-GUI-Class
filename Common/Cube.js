@@ -19,28 +19,7 @@ function Cube( vertexShaderId, fragmentShaderId ) {
     this.positions = {
         values : new Float32Array([
            // Add your list vertex positions here
-           // Front face
-           /*
-           0.5, 0.5, 0.5,
-           0.5, -0.5, 0.5,
-           -0.5, -0.5, 0.5,
-           -0.5, 0.5, 0.5,
-           0.5, 0.5, -0.5,
-           0.5, -0.5, -0.5,
-           -0.5, -0.5, -0.5,
-           -0.5, 0.5, -0.5
-           */
-           /*
-           0.0, 0.0,  0.0,  //vert 0
-           1.0, 0.0,  0.0,   //vert 1
-           1.0,  1.0,  0.0,  //vert 2
-           0.0,  1.0,  0.0,  //vert 3
-
-           0.0, 0.0, 1.0,    //vert 4
-           1.0, 0.0, 1.0,    //vert 5
-           1.0, 1.0, 1.0,    //vert 6
-           0.0, 1.0, 1.0,    //vert 7
-           */
+           
            0.5, 0.5,  0.5,  //vert 0
            0.5, -0.5,  0.5,   //vert 1
            -0.5,  -0.5,  0.5,  //vert 2
@@ -51,18 +30,7 @@ function Cube( vertexShaderId, fragmentShaderId ) {
            -0.5, -0.5, -0.5,    //vert 6
            -0.5, 0.5, -0.5,    //vert 7
 
-/*
 
-0.0, 0.0,  0.0,  //vert 0
-1.0, 0.0,  0.0,   //vert 1
-1.0,  1.0,  0.0,  //vert 2
-0.0,  1.0,  0.0,  //vert 3
-
-0.0, 0.0, 1.0,    //vert 4
-1.0, 0.0, 1.0,    //vert 5
-1.0, 1.0, 1.0,    //vert 6
-0.0, 1.0, 1.0,    //vert 7
-*/
 
             ]),
         numComponents : 3
@@ -97,43 +65,7 @@ function Cube( vertexShaderId, fragmentShaderId ) {
             4, 5, 7,
             7, 5, 6
 
-          //  2, 3, 5,  5, 3, 4,  // top
-            //4, 7, 3,  3, 7, 0,  //left
-          //  0, 1, 7,  7, 1, 6,  //bottom
-          //  6, 7, 5,  5, 7, 4,  //back
-          //  1, 6, 2,  2, 6, 5   //right
-
-
-            /*
-            //Front
-            0, 1, 3, 2,
-            // Right
-            2, 6, 1, 5,
-            // back
-            5, 4, 6, 7,
-            // left
-            7, 3, 4, 0,
-            //bottom
-            0, 4, 1, 5,
-            */
-
-            /*
-           //front face
-           0, 1, 3,
-           3, 1, 2,
-           //bottom face
-           1, 2, 5,
-           5, 2, 6,
-           //back face
-           4, 5, 6,
-           4, 6, 7,
-           //left face
-           2, 3, 6,
-           6, 3, 7,
-           //right face
-           4, 5, 0,
-           5, 1, 0
-           */
+         
 
         ])
     };
