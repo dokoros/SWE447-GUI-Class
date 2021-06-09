@@ -250,7 +250,7 @@ function render() {
   planet.render();
   ms.pop();
 
-  // ===JUPITER=====
+    // ===JUPITER=====
   name = "Jupiter";
   planet = Planets[name];
   data = SolarSystem[name];
@@ -278,7 +278,7 @@ function render() {
   planet.PointMode = false;
 
   ms.push();
-  ms.rotate((time / data.year), [0, 1, 0]);
+  ms.rotate((time * (data.year/100)), [0, 1, 0]);
   ms.translate(((data.distance * 5) - 5), 0, 0);
   ms.scale(data.radius/1.2);
 
@@ -349,7 +349,6 @@ function render() {
 
   planet.render();
   ms.pop();
-  //
 
   window.requestAnimationFrame(render);
 }
