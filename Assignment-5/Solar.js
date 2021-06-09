@@ -258,7 +258,7 @@ function render() {
   planet.PointMode = false;
 
   ms.push();
-  ms.rotate((time * (data.year/2) ), [0, 1, 0]);
+  ms.rotate((time * (data.year/50) ), [0, 1, 0]);
   ms.translate(((data.distance * 5) + 10), 0, 0);
   ms.scale(data.radius / 1.1);
 
