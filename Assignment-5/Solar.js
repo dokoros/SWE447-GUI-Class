@@ -35,8 +35,10 @@ var V;  // matrix storing the viewing transformation
 
 // Projection transformation parameters
 var P;  // matrix storing the projection transformation
-var near = 10;      // near clipping plane's distance
-var far = 120;      // far clipping plane's distance
+//var near = 10;      // near clipping plane's distance
+//var far = 120;      // far clipping plane's distance
+var near = 1;      // near clipping plane's distance
+var far = 200;      // far clipping plane's distance
 
 // Animation variables
 var time = 0.0;      // time, our global time constant, which is
@@ -250,7 +252,7 @@ function render() {
   planet.render();
   ms.pop();
 
-    // ===JUPITER=====
+  // ===JUPITER=====
   name = "Jupiter";
   planet = Planets[name];
   data = SolarSystem[name];
@@ -298,7 +300,7 @@ function render() {
   planet.PointMode = false;
 
   ms.push();
-  ms.rotate((time / data.year), [0, 1, 0]);
+  ms.rotate((time * (data.year/300)), [0, 1, 0]);
   ms.translate(((data.distance * 5) - 40), 0, 0);
   ms.scale(data.radius/1.5);
 
@@ -318,7 +320,7 @@ function render() {
   planet.PointMode = false;
 
   ms.push();
-  ms.rotate((time / data.year), [0, 1, 0]);
+  ms.rotate((time * (data.year/700)), [0, 1, 0]);
   ms.translate(((data.distance * 5) - 80), 0, 0);
   ms.scale(data.radius/1.5);
 
@@ -338,7 +340,7 @@ function render() {
   planet.PointMode = false;
 
   ms.push();
-  ms.rotate((time / data.year), [0, 1, 0]);
+  ms.rotate((time * (data.year/1300)), [0, 1, 0]);
   ms.translate(((data.distance *2) + 10), 0, 0);
   ms.scale(data.radius);
 
@@ -349,6 +351,7 @@ function render() {
 
   planet.render();
   ms.pop();
+  //
 
   window.requestAnimationFrame(render);
 }
@@ -364,7 +367,7 @@ function resize() {
 
   gl.viewport(0, 0, w, h);
 
-  var fovy = 80.0; // degrees
+  var fovy = 60.0; // degrees
   var aspect = w / h;
 
   P = perspective(fovy, aspect, near, far);
