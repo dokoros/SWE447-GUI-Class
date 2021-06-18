@@ -18,61 +18,50 @@ function Cube( vertexShaderId, fragmentShaderId ) {
 
     this.positions = {
         values : new Float32Array([
-           // Add your list vertex positions here
-        /*
-           0.5, 0.5,  0.5,  //vert 0
-           0.5, -0.5,  0.5,   //vert 1
-           -0.5,  -0.5,  0.5,  //vert 2
-           -0.5,  0.5,  0.5,  //vert 3
-
-           0.5, 0.5, -0.5,    //vert 4
-           0.5, -0.5, -0.5,    //vert 5
-           -0.5, -0.5, -0.5,    //vert 6
-           -0.5, 0.5, -0.5,    //vert 7
-        */
+        // Add your list vertex positions here
        // Front face
-       -0.5, -0.5,  -0.5,
-       -0.5,  0.5,  -0.5,
-        0.5, -0.5,  -0.5,
-       -0.5,  0.5,  -0.5,
-        0.5,  0.5,  -0.5,
-        0.5, -0.5,  -0.5,
-   
-       -0.5, -0.5,   0.5,
-        0.5, -0.5,   0.5,
-       -0.5,  0.5,   0.5,
-       -0.5,  0.5,   0.5,
-        0.5, -0.5,   0.5,
-        0.5,  0.5,   0.5,
-   
-       -0.5,   0.5, -0.5,
-       -0.5,   0.5,  0.5,
-        0.5,   0.5, -0.5,
-       -0.5,   0.5,  0.5,
-        0.5,   0.5,  0.5,
-        0.5,   0.5, -0.5,
-   
-       -0.5,  -0.5, -0.5,
-        0.5,  -0.5, -0.5,
-       -0.5,  -0.5,  0.5,
-       -0.5,  -0.5,  0.5,
-        0.5,  -0.5, -0.5,
-        0.5,  -0.5,  0.5,
-   
-       -0.5,  -0.5, -0.5,
-       -0.5,  -0.5,  0.5,
-       -0.5,   0.5, -0.5,
-       -0.5,  -0.5,  0.5,
-       -0.5,   0.5,  0.5,
-       -0.5,   0.5, -0.5,
-   
-        0.5,  -0.5, -0.5,
-        0.5,   0.5, -0.5,
-        0.5,  -0.5,  0.5,
-        0.5,  -0.5,  0.5,
-        0.5,   0.5, -0.5,
-        0.5,   0.5,  0.5,
-
+			-0.5, -0.5, +0.5,
+			-0.5, +0.5, +0.5,
+			+0.5, -0.5, +0.5,
+			+0.5, +0.5, +0.5,
+			+0.5, -0.5, +0.5,
+			-0.5, +0.5, +0.5,
+			// Back face
+			-0.5, -0.5, -0.5,
+			+0.5, -0.5, -0.5,
+			-0.5, +0.5, -0.5,
+			+0.5, +0.5, -0.5,
+			-0.5, +0.5, -0.5,
+			+0.5, -0.5, -0.5,
+			// Top face
+			-0.5, +0.5, -0.5,
+			+0.5, +0.5, -0.5,
+			-0.5, +0.5, +0.5,
+			+0.5, +0.5, +0.5,
+			-0.5, +0.5, +0.5,
+			+0.5, +0.5, -0.5,		
+			// Bottom face
+			-0.5, -0.5, -0.5,
+			-0.5, -0.5, +0.5,
+			+0.5, -0.5, -0.5,
+			+0.5, -0.5, +0.5,
+			+0.5, -0.5, -0.5,
+			-0.5, -0.5, +0.5,
+			// Right face
+			+0.5, -0.5, -0.5,
+			+0.5, -0.5, +0.5,
+			+0.5, +0.5, -0.5,
+			+0.5, +0.5, +0.5,
+			+0.5, +0.5, -0.5,
+			+0.5, -0.5, +0.5,		
+			// Left face
+			-0.5, -0.5, -0.5,
+			-0.5, +0.5, -0.5,
+			-0.5, -0.5, +0.5,
+			-0.5, +0.5, +0.5,
+			-0.5, -0.5, +0.5,
+			-0.5, +0.5, -0.5,
+            
             ]),
         numComponents : 3
     };
@@ -120,7 +109,7 @@ function Cube( vertexShaderId, fragmentShaderId ) {
         0.0,  1.0,
         1.0,  1.0,
         0.0,  1.0,
-        1.0,  0.0,
+        1.0,  0.0
         
         ]),
         numComponents : 2
@@ -128,41 +117,15 @@ function Cube( vertexShaderId, fragmentShaderId ) {
 
     this.indices = {
         values : new Uint16Array([
-            // Add your list of triangle indices here
-            /*
-            // front
-            3, 2, 7,
-            7, 2, 6,
-
-
-            //bottom
-            3, 2, 0,
-            0, 2, 1,
-
-            //back
-            0, 1, 4,
-            4, 1, 5,
-
-            //left
-            0, 3, 4,
-            4, 3, 7,
-
-            //Right
-            2, 1, 6,
-            6, 1, 5,
-
-            //top
-            4, 5, 7,
-            7, 5, 6
-
-          */
-         // Add your list of triangle indices here
-			 0,  1,  2,  3,  4,  5,   // front
-			 6,  7,  8,  9, 10, 11,   // back
-			12, 13, 14, 15, 16, 17,   // top
-			18, 19, 20, 21, 22, 23,   // bottom
-			24, 25, 26, 27, 28, 29,   // right
-			30, 31, 32, 33, 34, 35,   // left
+       
+        // Add your list of triangle indices here
+		0,  1,  2,  3,  4,  5,   // front
+		6,  7,  8,  9, 10, 11,   // back
+	    12, 13, 14, 15, 16, 17,   // top
+		18, 19, 20, 21, 22, 23,   // bottom
+		24, 25, 26, 27, 28, 29,   // right
+		30, 31, 32, 33, 34, 35,   // left
+        
         ])
     };
     this.indices.count = this.indices.values.length;
@@ -175,7 +138,6 @@ function Cube( vertexShaderId, fragmentShaderId ) {
         gl.bindTexture(gl.TEXTURE_2D, texture);
         // Fill the texture with a 1x1 blue pixel.
         gl.texImage2D(gl.TEXTURE_2D, 0, gl.RGBA, gl.RGBA, gl.UNSIGNED_BYTE, image);
-                    //new Uint8Array([0, 0, 255, 255]));
         
         gl.texParameteri(gl.TEXTURE_2D, gl.TEXTURE_WRAP_S, gl.CLAMP_TO_EDGE);
         gl.texParameteri(gl.TEXTURE_2D, gl.TEXTURE_WRAP_T, gl.CLAMP_TO_EDGE);
@@ -184,21 +146,6 @@ function Cube( vertexShaderId, fragmentShaderId ) {
         gl.generateMipmap(gl.TEXTURE_2D);
         gl.bindTexture(gl.TEXTURE_2D, null);
         
-      
-        /*
-        // Check if the image is a power of 2 in both dimensions.
-        if (isPowerOf2(image.width) && isPowerOf2(image.height)) {
-            // Yes, it's a power of 2. Generate mips.
-            gl.generateMipmap(gl.TEXTURE_2D);
-            } else {
-            // No, it's not a power of 2. Turn of mips and set wrapping to clamp to edge
-            gl.texParameteri(gl.TEXTURE_2D, gl.TEXTURE_WRAP_S, gl.CLAMP_TO_EDGE);
-            gl.texParameteri(gl.TEXTURE_2D, gl.TEXTURE_WRAP_T, gl.CLAMP_TO_EDGE);
-            gl.texParameteri(gl.TEXTURE_2D, gl.TEXTURE_MIN_FILTER, gl.LINEAR);
-        
-
-        }
-        */
           
     }
 
@@ -208,25 +155,29 @@ function Cube( vertexShaderId, fragmentShaderId ) {
         }
     }
 
-    function initTexture(){
+    function initTexture(url){
         texture = gl.createTexture();
+        var textureInfo = {
+            width: 1,   // we don't know the size until it loads
+            height: 1,
+            texture: texture,
+        };
         texImage = new Image();
         texImage.onload = function() {
-
+            textureInfo.width = texImage.width;
+            textureInfo.height = texImage.height;
             LoadingTexture(texImage, texture);
         };
-        texImage.src = "cubetexture.png";
-        requestCORSIfNotSameOrigin(texImage, texImage.src);
+
+        //texImage.src = "cubetexture.png";
+        requestCORSIfNotSameOrigin(texImage, url);
+        texImage.src = url;
+        return textureInfo;
         
         //texImage.src = "https://webglfundamentals.org/webgl/resources/noodles.jpg";
     }
-    initTexture();
+    var texInfo = initTexture("cubetexture.png");
 
-            
-    function isPowerOf2(value) {
-        return (value & (value - 1)) === 0;
-    }
-    
     
     this.positions.buffer = gl.createBuffer();
     gl.bindBuffer( gl.ARRAY_BUFFER, this.positions.buffer );
@@ -265,14 +216,12 @@ function Cube( vertexShaderId, fragmentShaderId ) {
 
         // bind the texcoord buffer.
         gl.bindBuffer( gl.ARRAY_BUFFER, this.textureCoordinates.buffer );
-
-        // Tell the texcoord attribute how to get data out of texcoordBuffer (ARRAY_BUFFER)
     
         gl.vertexAttribPointer(this.textureCoordinates.attributeLoc, this.textureCoordinates.numComponents, gl.FLOAT, gl.FALSE, 0, 0);
 
         
         gl.activeTexture(gl.TEXTURE0);
-        gl.bindTexture(gl.TEXTURE_2D, texture)
+        gl.bindTexture(gl.TEXTURE_2D, texInfo.texture)
         gl.uniform1i(TexLoc, 0);
 
         // Draw the cube's base
