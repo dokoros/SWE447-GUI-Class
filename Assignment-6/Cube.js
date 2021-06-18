@@ -216,8 +216,8 @@ function Cube( vertexShaderId, fragmentShaderId ) {
     function LoadingTexture(image, texture){
         gl.bindTexture(gl.TEXTURE_2D, texture);
         // Fill the texture with a 1x1 blue pixel.
-        gl.texImage2D(gl.TEXTURE_2D, 0, gl.RGBA, 1, 1, 0, gl.RGBA, gl.UNSIGNED_BYTE,
-                    new Uint8Array([0, 0, 255, 255]));
+        gl.texImage2D(gl.TEXTURE_2D, 0, gl.RGBA, 1, 1, 0, gl.RGBA, gl.UNSIGNED_BYTE, image);
+                    //new Uint8Array([0, 0, 255, 255]));
         gl.texParameteri(gl.TEXTURE_2D, gl.TEXTURE_WRAP_S, gl.CLAMP_TO_EDGE);
         gl.texParameteri(gl.TEXTURE_2D, gl.TEXTURE_WRAP_T, gl.CLAMP_TO_EDGE);
         gl.texParameteri(gl.TEXTURE_2D, gl.TEXTURE_MAG_FILTER, gl.LINEAR);
@@ -245,12 +245,12 @@ function Cube( vertexShaderId, fragmentShaderId ) {
 
     function initTexture(){
         texture = gl.createTexture();
-        image = new Image();
-        image.onload = function() {
+        texImage = new Image();
+        texImage.onload = function() {
 
-            LoadingTexture(image, texture);
+            LoadingTexture(texImage, texture);
         };
-        image.src = "Test.png";
+        texImage.src = "Test.png";
     }
     initTexture();
 
