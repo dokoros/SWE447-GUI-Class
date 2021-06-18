@@ -215,7 +215,7 @@ function Cube( vertexShaderId, fragmentShaderId ) {
 
             LoadingTexture(texImage, texture);
         };
-        texImage.src = "Test2.png";
+        texImage.src = "cubetexture.png";
         requestCORSIfNotSameOrigin(texImage, texImage.src);
         
         //texImage.src = "https://webglfundamentals.org/webgl/resources/noodles.jpg";
