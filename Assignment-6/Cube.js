@@ -19,7 +19,7 @@ function Cube( vertexShaderId, fragmentShaderId ) {
     this.positions = {
         values : new Float32Array([
            // Add your list vertex positions here
-
+        /*
            0.5, 0.5,  0.5,  //vert 0
            0.5, -0.5,  0.5,   //vert 1
            -0.5,  -0.5,  0.5,  //vert 2
@@ -29,7 +29,49 @@ function Cube( vertexShaderId, fragmentShaderId ) {
            0.5, -0.5, -0.5,    //vert 5
            -0.5, -0.5, -0.5,    //vert 6
            -0.5, 0.5, -0.5,    //vert 7
-
+        */
+       // Front face
+			-0.5, -0.5, +0.5,
+			-0.5, +0.5, +0.5,
+			+0.5, -0.5, +0.5,
+			+0.5, +0.5, +0.5,
+			+0.5, -0.5, +0.5,
+			-0.5, +0.5, +0.5,
+			// Back face
+			-0.5, -0.5, -0.5,
+			+0.5, -0.5, -0.5,
+			-0.5, +0.5, -0.5,
+			+0.5, +0.5, -0.5,
+			-0.5, +0.5, -0.5,
+			+0.5, -0.5, -0.5,
+			// Top face
+			-0.5, +0.5, -0.5,
+			+0.5, +0.5, -0.5,
+			-0.5, +0.5, +0.5,
+			+0.5, +0.5, +0.5,
+			-0.5, +0.5, +0.5,
+			+0.5, +0.5, -0.5,		
+			// Bottom face
+			-0.5, -0.5, -0.5,
+			-0.5, -0.5, +0.5,
+			+0.5, -0.5, -0.5,
+			+0.5, -0.5, +0.5,
+			+0.5, -0.5, -0.5,
+			-0.5, -0.5, +0.5,
+			// Right face
+			+0.5, -0.5, -0.5,
+			+0.5, -0.5, +0.5,
+			+0.5, +0.5, -0.5,
+			+0.5, +0.5, +0.5,
+			+0.5, +0.5, -0.5,
+			+0.5, -0.5, +0.5,		
+			// Left face
+			-0.5, -0.5, -0.5,
+			-0.5, +0.5, -0.5,
+			-0.5, -0.5, +0.5,
+			-0.5, +0.5, +0.5,
+			-0.5, -0.5, +0.5,
+			-0.5, +0.5, -0.5,
 
             ]),
         numComponents : 3
@@ -37,7 +79,7 @@ function Cube( vertexShaderId, fragmentShaderId ) {
 
     this.textureCoordinates = {
         values: new Float32Array ([
-
+        /*
         // select the top left image
         0   , 0  ,
         0   , 0.5,
@@ -80,7 +122,48 @@ function Cube( vertexShaderId, fragmentShaderId ) {
         0.5 , 1  ,
         0.75, 0.5,
         0.75, 1  ,
+        */
+        0.0,  0.0,
+        1.0,  0.0,
+        0.0,  1.0,
+        1.0,  1.0,
+        0.0,  1.0,
+        1.0,  0.0,
 
+        0.0,  0.0,
+        1.0,  0.0,
+        0.0,  1.0,
+        1.0,  1.0,
+        0.0,  1.0,
+        1.0,  0.0,
+
+        0.0,  0.0,
+        1.0,  0.0,
+        0.0,  1.0,
+        1.0,  1.0,
+        0.0,  1.0,
+        1.0,  0.0,
+
+        0.0,  0.0,
+        1.0,  0.0,
+        0.0,  1.0,
+        1.0,  1.0,
+        0.0,  1.0,
+        1.0,  0.0,
+
+        0.0,  0.0,
+        1.0,  0.0,
+        0.0,  1.0,
+        1.0,  1.0,
+        0.0,  1.0,
+        1.0,  0.0,
+
+        0.0,  0.0,
+        1.0,  0.0,
+        0.0,  1.0,
+        1.0,  1.0,
+        0.0,  1.0,
+        1.0,  0.0,
         ]),
         numComponents : 2
     };
@@ -88,7 +171,7 @@ function Cube( vertexShaderId, fragmentShaderId ) {
     this.indices = {
         values : new Uint16Array([
             // Add your list of triangle indices here
-
+            /*
             // front
             3, 2, 7,
             7, 2, 6,
@@ -114,7 +197,14 @@ function Cube( vertexShaderId, fragmentShaderId ) {
             4, 5, 7,
             7, 5, 6
 
-          
+          */
+         // Add your list of triangle indices here
+			 0,  1,  2,  3,  4,  5,   // front
+			 6,  7,  8,  9, 10, 11,   // back
+			12, 13, 14, 15, 16, 17,   // top
+			18, 19, 20, 21, 22, 23,   // bottom
+			24, 25, 26, 27, 28, 29,   // right
+			30, 31, 32, 33, 34, 35,   // left
         ])
     };
     this.indices.count = this.indices.values.length;
@@ -160,7 +250,7 @@ function Cube( vertexShaderId, fragmentShaderId ) {
 
             LoadingTexture(image, texture);
         };
-        image.src = "https://webglfundamentals.org/webgl/resources/noodles.jpg";
+        image.src = "Test.png";
     }
     initTexture();
 
