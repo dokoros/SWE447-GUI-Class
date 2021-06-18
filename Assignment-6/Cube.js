@@ -31,47 +31,47 @@ function Cube( vertexShaderId, fragmentShaderId ) {
            -0.5, 0.5, -0.5,    //vert 7
         */
        // Front face
-			-0.5, -0.5, +0.5,
-			-0.5, +0.5, +0.5,
-			+0.5, -0.5, +0.5,
-			+0.5, +0.5, +0.5,
-			+0.5, -0.5, +0.5,
-			-0.5, +0.5, +0.5,
-			// Back face
-			-0.5, -0.5, -0.5,
-			+0.5, -0.5, -0.5,
-			-0.5, +0.5, -0.5,
-			+0.5, +0.5, -0.5,
-			-0.5, +0.5, -0.5,
-			+0.5, -0.5, -0.5,
-			// Top face
-			-0.5, +0.5, -0.5,
-			+0.5, +0.5, -0.5,
-			-0.5, +0.5, +0.5,
-			+0.5, +0.5, +0.5,
-			-0.5, +0.5, +0.5,
-			+0.5, +0.5, -0.5,		
-			// Bottom face
-			-0.5, -0.5, -0.5,
-			-0.5, -0.5, +0.5,
-			+0.5, -0.5, -0.5,
-			+0.5, -0.5, +0.5,
-			+0.5, -0.5, -0.5,
-			-0.5, -0.5, +0.5,
-			// Right face
-			+0.5, -0.5, -0.5,
-			+0.5, -0.5, +0.5,
-			+0.5, +0.5, -0.5,
-			+0.5, +0.5, +0.5,
-			+0.5, +0.5, -0.5,
-			+0.5, -0.5, +0.5,		
-			// Left face
-			-0.5, -0.5, -0.5,
-			-0.5, +0.5, -0.5,
-			-0.5, -0.5, +0.5,
-			-0.5, +0.5, +0.5,
-			-0.5, -0.5, +0.5,
-			-0.5, +0.5, -0.5,
+       -0.5, -0.5,  -0.5,
+       -0.5,  0.5,  -0.5,
+        0.5, -0.5,  -0.5,
+       -0.5,  0.5,  -0.5,
+        0.5,  0.5,  -0.5,
+        0.5, -0.5,  -0.5,
+   
+       -0.5, -0.5,   0.5,
+        0.5, -0.5,   0.5,
+       -0.5,  0.5,   0.5,
+       -0.5,  0.5,   0.5,
+        0.5, -0.5,   0.5,
+        0.5,  0.5,   0.5,
+   
+       -0.5,   0.5, -0.5,
+       -0.5,   0.5,  0.5,
+        0.5,   0.5, -0.5,
+       -0.5,   0.5,  0.5,
+        0.5,   0.5,  0.5,
+        0.5,   0.5, -0.5,
+   
+       -0.5,  -0.5, -0.5,
+        0.5,  -0.5, -0.5,
+       -0.5,  -0.5,  0.5,
+       -0.5,  -0.5,  0.5,
+        0.5,  -0.5, -0.5,
+        0.5,  -0.5,  0.5,
+   
+       -0.5,  -0.5, -0.5,
+       -0.5,  -0.5,  0.5,
+       -0.5,   0.5, -0.5,
+       -0.5,  -0.5,  0.5,
+       -0.5,   0.5,  0.5,
+       -0.5,   0.5, -0.5,
+   
+        0.5,  -0.5, -0.5,
+        0.5,   0.5, -0.5,
+        0.5,  -0.5,  0.5,
+        0.5,  -0.5,  0.5,
+        0.5,   0.5, -0.5,
+        0.5,   0.5,  0.5,
 
             ]),
         numComponents : 3
@@ -79,50 +79,7 @@ function Cube( vertexShaderId, fragmentShaderId ) {
 
     this.textureCoordinates = {
         values: new Float32Array ([
-        /*
-        // select the top left image
-        0   , 0  ,
-        0   , 0.5,
-        0.25, 0  ,
-        0   , 0.5,
-        0.25, 0.5,
-        0.25, 0  ,
-        // select the top middle image
-        0.25, 0  ,
-        0.5 , 0  ,
-        0.25, 0.5,
-        0.25, 0.5,
-        0.5 , 0  ,
-        0.5 , 0.5,
-        // select to top right image
-        0.5 , 0  ,
-        0.5 , 0.5,
-        0.75, 0  ,
-        0.5 , 0.5,
-        0.75, 0.5,
-        0.75, 0  ,
-        // select the bottom left image
-        0   , 0.5,
-        0.25, 0.5,
-        0   , 1  ,
-        0   , 1  ,
-        0.25, 0.5,
-        0.25, 1  ,
-        // select the bottom middle image
-        0.25, 0.5,
-        0.25, 1  ,
-        0.5 , 0.5,
-        0.25, 1  ,
-        0.5 , 1  ,
-        0.5 , 0.5,
-        // select the bottom right image
-        0.5 , 0.5,
-        0.75, 0.5,
-        0.5 , 1  ,
-        0.5 , 1  ,
-        0.75, 0.5,
-        0.75, 1  ,
-        */
+        
         0.0,  0.0,
         1.0,  0.0,
         0.0,  1.0,
@@ -164,6 +121,7 @@ function Cube( vertexShaderId, fragmentShaderId ) {
         1.0,  1.0,
         0.0,  1.0,
         1.0,  0.0,
+        
         ]),
         numComponents : 2
     };
@@ -216,15 +174,17 @@ function Cube( vertexShaderId, fragmentShaderId ) {
     function LoadingTexture(image, texture){
         gl.bindTexture(gl.TEXTURE_2D, texture);
         // Fill the texture with a 1x1 blue pixel.
-        gl.texImage2D(gl.TEXTURE_2D, 0, gl.RGBA, 1, 1, 0, gl.RGBA, gl.UNSIGNED_BYTE, image);
+        gl.texImage2D(gl.TEXTURE_2D, 0, gl.RGBA, gl.RGBA, gl.UNSIGNED_BYTE, image);
                     //new Uint8Array([0, 0, 255, 255]));
+        
         gl.texParameteri(gl.TEXTURE_2D, gl.TEXTURE_WRAP_S, gl.CLAMP_TO_EDGE);
         gl.texParameteri(gl.TEXTURE_2D, gl.TEXTURE_WRAP_T, gl.CLAMP_TO_EDGE);
         gl.texParameteri(gl.TEXTURE_2D, gl.TEXTURE_MAG_FILTER, gl.LINEAR);
         gl.texParameteri(gl.TEXTURE_2D, gl.TEXTURE_MIN_FILTER, gl.LINEAR);
         gl.generateMipmap(gl.TEXTURE_2D);
         gl.bindTexture(gl.TEXTURE_2D, null);
-
+        
+      
         /*
         // Check if the image is a power of 2 in both dimensions.
         if (isPowerOf2(image.width) && isPowerOf2(image.height)) {
@@ -242,6 +202,11 @@ function Cube( vertexShaderId, fragmentShaderId ) {
           
     }
 
+    function requestCORSIfNotSameOrigin(img, url) {
+        if ((new URL(url, window.location.href)).origin !== window.location.origin) {
+          img.crossOrigin = "";
+        }
+    }
 
     function initTexture(){
         texture = gl.createTexture();
@@ -250,7 +215,10 @@ function Cube( vertexShaderId, fragmentShaderId ) {
 
             LoadingTexture(texImage, texture);
         };
-        texImage.src = "Test.png";
+        texImage.src = "Test2.png";
+        requestCORSIfNotSameOrigin(texImage, texImage.src);
+        
+        //texImage.src = "https://webglfundamentals.org/webgl/resources/noodles.jpg";
     }
     initTexture();
 
