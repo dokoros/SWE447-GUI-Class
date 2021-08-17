@@ -1,8 +1,8 @@
-1.	For my final project I will create a Rubik’s Cube that the user can interacting with. The Rubik’s Cube will render realistically with light source and texture. 
+1.	For my final project I will create a game inspire by "Flappy Bird" called "Flappy Plane". The game objective is to collect many candy as you can while avoid hitting the penguin. The user can use spacebar, left mouseclick or touchscreen to make the plane go up.  
 2.	Implementation:
-  a.	Week 1: create cubes and put them in the correct place in space to create one Rubik’s Cube
-  b.	Week 2: Implement light source into the scene 
-  c.	Week 3: find out how to put the cube into row and column so they can rotate either horizontally or vertically accordingly to their row or column.
-  d.	Week 4: Add user interaction with the cube. They first need to click either row or column and then they can rotate them by using the arrow keys. The user can also right click on the Rubik’s Cube and spin the cube around
-  e.	Week 5: User can also rotate the camera, added auto scramble for the Rubik’s Cube.
+  a.	Week 1: create camera, lights, scene and the renderer
+  b.	Week 2: Loading the plane, change the camera position and make it follow the plane, make the plane wobble.
+  c.	Week 3: Add user input. User can press spacebar, mouse click or touch screen to keep the plane up. Add score and lives to the game. 
+  d.	Week 4: loading penguin model and the candy model. Make every colummn has only one candy and 6 pengiun. The candy will alway be in the middle of the column. Spawn the 3 columns of the obstacle at the time and space them accordingly. Update the lives and scores. The player will lose thier lives if they hit the penguin and they will get score if they hit the candy.
+  e.	Week 5: Add explosion effect. Add sound effects.
 3.	I will be using THREE.js
